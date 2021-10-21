@@ -1,0 +1,13 @@
+package com.example.notes.screens.main
+
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
+import com.example.notes.utills.REPOSITORY
+
+class MainFragmentViewModel(application: Application):AndroidViewModel(application) {
+    val allNotes = REPOSITORY.allNotes
+
+    fun signOut(){
+        REPOSITORY.singOut()
+    }
+}
